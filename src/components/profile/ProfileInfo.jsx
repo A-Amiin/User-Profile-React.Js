@@ -4,30 +4,32 @@ import Input from '../common/Input';
 const ProfileInfo = ({ user, isEditing, onEdit }) => {
   if (isEditing) {
     return (
-      <div className="space-y-4">
-        <Input
-          id="name"
-          label="Name"
-          value={user.name}
-          onChange={(e) => onEdit('name', e.target.value)}
-          placeholder="Your Name"
-        />
-        <Input
-          id="email"
-          type="email"
-          label="Email"
-          value={user.email}
-          onChange={(e) => onEdit('email', e.target.value)}
-          placeholder="Your Email"
-        />
-        <Input
-          id="bio"
-          type="textarea"
-          label="Bio"
-          value={user.bio}
-          onChange={(e) => onEdit('bio', e.target.value)}
-          placeholder="Your Bio"
-        />
+      <div className="profile-info flex-1 space-y-6">
+        <div className="space-y-4">
+          <Input
+            id="name"
+            label="Name"
+            value={user.name}
+            onChange={(e) => onEdit('name', e.target.value)}
+            placeholder="Your Name"
+          />
+          <Input
+            id="email"
+            type="email"
+            label="Email"
+            value={user.email}
+            onChange={(e) => onEdit('email', e.target.value)}
+            placeholder="Your Email"
+          />
+          <Input
+            id="bio"
+            type="textarea"
+            label="Bio"
+            value={user.bio}
+            onChange={(e) => onEdit('bio', e.target.value)}
+            placeholder="Your Bio"
+          />
+        </div>
       </div>
     );
   }

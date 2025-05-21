@@ -45,8 +45,6 @@ function App() {
           user={isEditing ? editedUser : user}
           isEditing={isEditing}
           onEdit={handleEdit}
-          onSave={handleSave}
-          onCancel={handleCancel}
         />
 
         <SocialLinks />
@@ -55,6 +53,8 @@ function App() {
           onEditProfile={handleToggleEdit}
           onToggleSkills={handleToggleSkills}
           isEditing={isEditing}
+          onSave={handleSave}
+          onCancel={handleCancel}
         />
 
         <SkillsList

@@ -9,10 +9,10 @@ const Input = ({
   label,
   id
 }) => {
-  const baseStyles = 'w-full p-2 border-2 border-[#007bff] rounded-lg outline-none';
+  const baseStyles = 'w-full p-3 border-2 border-[#007bff] rounded-lg outline-none focus:border-[#0056b3] transition-colors';
   
   return (
-    <div className="space-y-1">
+    <div className="space-y-2">
       {label && (
         <label htmlFor={id} className="block text-sm font-medium text-gray-700">
           {label}
@@ -24,8 +24,7 @@ const Input = ({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className={`${baseStyles} ${className}`}
-          rows="3"
+          className={`${baseStyles} min-h-[100px] resize-y ${className}`}
         />
       ) : (
         <input
